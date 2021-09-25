@@ -70,9 +70,9 @@ function preload(){
     "flatboy/png/Idle10.png","flatboy/png/Idle11.png","flatboy/png/Idle12.png","flatboy/png/Idle13.png","flatboy/png/Idle14.png",
     "flatboy/png/Idle15.png")
 
-  player_dead_img= loadAnimation("flatboy/png/Dead1.png","flatboy/pngDead2.png","flatboy/pngDead3.png","flatboy/pngDead4.png",
-    "flatboy/pngDead5.png","flatboy/pngDead6.png","flatboy/pngDead7.png","flatboy/pngDead8.png","flatboy/pngDead9.png",
-    "flatboy/pngDead10.png","flatboy/pngDead11.png","flatboy/pngDead12.png","flatboy/pngDead13.png")
+  player_dead_img= loadAnimation("flatboy/png/Dead1.png","flatboy/png/Dead2.png","flatboy/png/Dead3.png","flatboy/png/Dead4.png",
+    "flatboy/png/Dead5.png","flatboy/png/Dead6.png","flatboy/png/Dead7.png","flatboy/png/Dead8.png","flatboy/png/Dead9.png",
+    "flatboy/png/Dead10.png","flatboy/png/Dead11.png","flatboy/png/Dead12.png","flatboy/png/Dead13.png")
 
   player_run_img= loadAnimation("flatboy/png/Run1.png","flatboy/png/Run2.png","flatboy/png/Run3.png","flatboy/png/Run4.png",
     "flatboy/png/Run5.png","flatboy/png/Run6.png","flatboy/png/Run7.png","flatboy/png/Run8.png","flatboy/png/Run9.png",
