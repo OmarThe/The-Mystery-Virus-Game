@@ -350,10 +350,10 @@ function movement(){
         lifeTimeTestTop.velocityY = 10;
         if(lifeTimeTestBottom.isTouching(lifeTimeTestTop)){
             boss.changeAnimation("Dead", boss_dead)
-            fill("Red")
+            fill("Blue")
             textSize(70);
-            text('Game Over',660, 190);
-            text('Game Over', 660, 190);
+            text('You Win',660, 190);
+            text('You Win', 660, 190);
             
         }
 
