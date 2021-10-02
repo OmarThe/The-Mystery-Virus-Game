@@ -5,21 +5,13 @@ function movement(){
         player.changeAnimation("dead")
 
     //switching stages to stage 2
-    }else if(keyIsDown(UP_ARROW) && gameState == "play" && stage == 1){
-        stage = 2
-        stageNeed = 2
+    }else if(placeHolder2 == 1){
+        fill("Red")
+        textSize(70);
+        text('Game Over',660, 190);
+        text('Game Over', 660, 190);
 
     //switching stages to stage 2
-    }else if(keyIsDown(DOWN_ARROW) && gameState == "play" && stage == 2){
-        stage = 3
-        stageNeed = 3
-    
-    //allows the player to jump
-    }else if(keyIsDown(75) && gameState == "play" && stage == 3){
-        stage = 4
-        stageNeed = 4
-    
-    //allows the player to jump
     }else if(keyIsDown(32) && gameState == "play"  && jumpCounter <  maxJump && player.velocityY > -18.6 && ability2 == 0){
         player.velocityY = -20
         jumpCounter = jumpCounter + 1; 
@@ -110,18 +102,22 @@ function movement(){
         platform1inv = createSprite(1468,480.25,70,20)
         platform1.addImage(platformImg)
         platform1.scale = 1
+        platform1inv.visible = false
 
         platform2 = createSprite(800,400,50,20)
         platform2inv = createSprite(800,380.25,70,20)
         platform2.addImage(platformImg)
         platform2.scale = 1
+        platform2inv.visible = false
 
         platform3 = createSprite(70,300,50,20)
         platform3inv = createSprite(70,250.25,120,20)
         platform3.addImage(platformImg)
         platform3.scale = 2
+        platform3inv.visible = false
 
         stageEnd2 = createSprite((displayWidth-displayWidth),displayHeight-900)
+        stageEnd2.visible = false
 
         if(stage == 2 && stageNeed == 2 && player.x == 300 && player.y == 400 ){
             stageNeed = 1
@@ -174,11 +170,13 @@ function movement(){
         stagePlatform1inv = createSprite(400,480.25,200,20)
         stagePlatform1.addImage(stagePlatformImg)
         stagePlatform1.scale = 0.6
-
+        stagePlatform1inv.visible = false
+        
         stagePlatform2 = createSprite(1200,500,50,20)
         stagePlatform2inv = createSprite(1200,480.25,200,20)
         stagePlatform2.addImage(stagePlatformImg)
         stagePlatform2.scale = 0.6
+        stagePlatform2inv.visible = false
 
         dinoBounceRight = createSprite(displayWidth+500,displayHeight/2,60,displayHeight)
         dinoBounceLeft = createSprite((displayWidth-displayWidth)-500,displayHeight/2,60,displayHeight)
@@ -188,6 +186,9 @@ function movement(){
 
         dinoBounceRightStart = createSprite(displayWidth-500,displayHeight/2,60,displayHeight)
         dinoBounceLeftStart = createSprite((displayWidth-displayWidth)+500,displayHeight/2,60,displayHeight)
+        dinoBounceRightStart.visible = false
+        dinoBounceLeftStart.visible = false
+
 
         dinoMirrorRight = createSprite(displayWidth+500,displayHeight/2,100,displayHeight)
         dinoMirrorLeft = createSprite((displayWidth-displayWidth)-500,displayHeight/2,100,displayHeight)
@@ -309,7 +310,6 @@ function movement(){
         boss.addAnimation("Run", boss_run)
         boss.addAnimation("Dead", boss_dead)
         boss.changeAnimation("Run", boss_run)
-        boss.debug = true
         boss.scale = 0.5
         boss.setCollider("rectangle", -100,0,400,400)
         boss.velocityX = 15
@@ -349,7 +349,12 @@ function movement(){
         lifeTimeTestTop.collide(lifeTimeTestCollide)
         lifeTimeTestTop.velocityY = 10;
         if(lifeTimeTestBottom.isTouching(lifeTimeTestTop)){
-            console.log("hello")
+            boss.changeAnimation("Dead", boss_dead)
+            fill("Red")
+            textSize(70);
+            text('Game Over',660, 190);
+            text('Game Over', 660, 190);
+            
         }
 
         if(boss.velocityX == 15){

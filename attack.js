@@ -130,6 +130,7 @@ function playerAttack2(){
         player.lifetime = 25
         dino_1.velocityX = -6.1
         placeHolder2 = 1
+        
     }
 
     if(player.isTouching(dino_2)){
@@ -137,6 +138,7 @@ function playerAttack2(){
         player.lifetime = 25
         dino_2.velocityX = -6.1
         placeHolder2 = 1
+        
     }
 
     if(player.isTouching(dino_3)){
@@ -144,6 +146,7 @@ function playerAttack2(){
         player.lifetime = 25
         dino_3.velocityX = -6.1
         placeHolder2 = 1
+        
     }
 
     if(player.isTouching(dino_4)){
@@ -151,6 +154,7 @@ function playerAttack2(){
         player.lifetime = 25
         dino_4.velocityX = -6.1
         placeHolder2 = 1
+        
     }
 
     if(player.isTouching(dino_5)){
@@ -158,6 +162,7 @@ function playerAttack2(){
         player.lifetime = 25
         dino_5.velocityX = -6.1
         placeHolder2 = 1
+        
     }
 
     if(player.isTouching(dino_6)){
@@ -165,6 +170,7 @@ function playerAttack2(){
         player.lifetime = 25
         dino_6.velocityX = -6.1
         placeHolder2 = 1
+        
     }
 
     if(player.isTouching(dino_7)){
@@ -172,6 +178,7 @@ function playerAttack2(){
         player.lifetime = 25
         dino_7.velocityX = -6.1
         placeHolder2 = 1
+        
     }
 
     if(player.isTouching(dino_8)){
@@ -179,6 +186,7 @@ function playerAttack2(){
         player.lifetime = 25
         dino_8.velocityX = -6.1
         placeHolder2 = 1
+        
     }
 
     if(player.isTouching(dino_9)){
@@ -186,6 +194,7 @@ function playerAttack2(){
         player.lifetime = 25
         dino_9.velocityX = -6.1
         placeHolder2 = 1
+        
     }
 
     if(player.isTouching(dino_10)){
@@ -193,6 +202,7 @@ function playerAttack2(){
         player.lifetime = 25
         dino_10.velocityX = -6.1
         placeHolder2 = 1
+        
     }
 }
 
@@ -493,131 +503,131 @@ function dinoSpawn(){
     //dino minions
   dino1 = createSprite(displayWidth+100,700, 50, 50);
   dinoHead1 = createSprite(dino1.x, dino1.y-20, 40, 70);
-  // dinoHead1.visible = false;
+   dinoHead1.visible = false;
   dino1.scale = 6
   dino1.mirrorX(-1)
   dino1.addAnimation("move", dino1Img)
-  dino1.debug = true
+
   dino1.setCollider("rectangle", 0,0, 10, 10)
 
   dino2 = createSprite(displayWidth+500,700, 50, 50);
   dinoHead2 = createSprite(dino2.x, dino2.y-20, 40, 70);
-  //dinoHead2.visible = false;
+  dinoHead2.visible = false;
   dino2.scale = 6
   dino2.mirrorX(-1)
   dino2.addAnimation("move", dino2Img)
-  dino2.debug = true
+
   dino2.setCollider("rectangle", 0,0, 10, 10)
 
   dino3 = createSprite(displayWidth+900,700, 50, 50);
   dinoHead3 = createSprite(dino3.x, dino3.y-20, 40, 70);
-  //dinoHead3.visible = false;
+  dinoHead3.visible = false;
   dino3.scale = 6
   dino3.mirrorX(-1)
   dino3.addAnimation("move", dino3Img)
-  dino3.debug = true
+
   dino3.setCollider("rectangle", 0,0, 10, 10)
 
   dino4 = createSprite(displayWidth+1300,700, 50, 50);
   dinoHead4 = createSprite(dino4.x, dino4.y-20, 40, 70);
-  //dinoHead4.visible = false;
+  dinoHead4.visible = false;
   dino4.scale = 6
   dino4.mirrorX(-1)
   dino4.addAnimation("move", dino4Img)
-  dino4.debug = true
+
   dino4.setCollider("rectangle", 0,0, 10, 10)
 
-  // Moving Left
+//Moving Left
   dino_1 = createSprite((displayWidth)+100,700, 50, 50);
   dinoHead_1 = createSprite(dino_1.x, dino_1.y-20, 40, 70);
-  //dinoHead_1.visible = false;
+  dinoHead_1.visible = false;
   dino_1.scale = 6
   dino_1.mirrorX(-1)
   dino_1.addAnimation("move", dino1Img)
-  dino_1.debug = true
+  
   dino_1.setCollider("rectangle", 0,0, 10, 10)
 
   dino_2 = createSprite((displayWidth)+500,700, 50, 50);
   dinoHead_2 = createSprite(dino_2.x, dino_2.y-20, 40, 70);
-  //dinoHead_2.visible = false;
+  dinoHead_2.visible = false;
   dino_2.scale = 6
   dino_2.mirrorX(-1)
   dino_2.addAnimation("move", dino2Img)
-  dino_2.debug = true
+  
   dino_2.setCollider("rectangle", 0,0, 10, 10)
   
   dino_3 = createSprite((displayWidth)+900,700, 50, 50);
   dinoHead_3 = createSprite(dino_3.x, dino_3.y-20, 40, 70);
-  //dinoHead_3.visible = false;
+  dinoHead_3.visible = false;
   dino_3.scale = 6
   dino_3.mirrorX(-1)
   dino_3.addAnimation("move", dino3Img)
-  dino_3.debug = true
+  
   dino_3.setCollider("rectangle", 0,0, 10, 10)
   
   dino_4 = createSprite((displayWidth)+1300,700, 50, 50);
   dinoHead_4 = createSprite(dino_4.x, dino_4.y-20, 40, 70);
-  //dinoHead_4.visible = false;
+  dinoHead_4.visible = false;
   dino_4.scale = 6
   dino_4.mirrorX(-1)
   dino_4.addAnimation("move", dino4Img)
-  dino_4.debug = true
+  
   dino_4.setCollider("rectangle", 0,0, 10, 10)
   
   dino_5 = createSprite((displayWidth)+1700,700, 50, 50);
   dinoHead_5 = createSprite(dino_5.x, dino_5.y-20, 40, 70);
-  // dinoHead_5.visible = false;
+   dinoHead_5.visible = false;
   dino_5.scale = 6
   dino_5.mirrorX(-1)
   dino_5.addAnimation("move", dino1Img)
-  dino_5.debug = true
+  
   dino_5.setCollider("rectangle", 0,0, 10, 10)
 
 
   //Moving Right
   dino_6 = createSprite((displayWidth-displayWidth)-100,700, 50, 50);
   dinoHead_6 = createSprite(dino_6.x, dino_6.y-20, 40, 70);
-  //dinoHead_6.visible = false;
+  dinoHead_6.visible = false;
   dino_6.scale = 6
   dino_6.mirrorX(1)
   dino_6.addAnimation("move", dino2Img)
-  dino_6.debug = true
+  
   dino_6.setCollider("rectangle", 0,0, 10, 10)
   
   dino_7 = createSprite((displayWidth-displayWidth)-500,700, 50, 50);
   dinoHead_7 = createSprite(dino_7.x, dino_7.y-20, 40, 70);
-  //dinoHead_7.visible = false;
+  dinoHead_7.visible = false;
   dino_7.scale = 6
   dino_7.mirrorX(1)
   dino_7.addAnimation("move", dino3Img)
-  dino_7.debug = true
+  
   dino_7.setCollider("rectangle", 0,0, 10, 10)
   
   dino_8 = createSprite((displayWidth-displayWidth)-900,700, 50, 50);
   dinoHead_8 = createSprite(dino_8.x, dino_8.y-20, 40, 70);
-  //dinoHead_8.visible = false;
+  dinoHead_8.visible = false;
   dino_8.scale = 6
   dino_8.mirrorX(1)
   dino_8.addAnimation("move", dino4Img)
-  dino_8.debug = true
+  
   dino_8.setCollider("rectangle", 0,0, 10, 10)
   
   dino_9 = createSprite((displayWidth-displayWidth)-1300,700, 50, 50);
   dinoHead_9 = createSprite(dino_9.x, dino_9.y-20, 40, 70);
-  //dinoHead_9.visible = false;
+  dinoHead_9.visible = false;
   dino_9.scale = 6
   dino_9.mirrorX(1)
   dino_9.addAnimation("move", dino1Img)
-  dino_9.debug = true
+  
   dino_9.setCollider("rectangle", 0,0, 10, 10)
   
   dino_10 = createSprite((displayWidth-displayWidth)-1700,700, 50, 50);
   dinoHead_10 = createSprite(dino_10.x, dino_10.y-20, 40, 70);
-  //dinoHead_10.visible = false;
+  dinoHead_10.visible = false;
   dino_10.scale = 6
   dino_10.mirrorX(1)
   dino_10.addAnimation("move", dino2Img)
-  dino_10.debug = true
+  
   dino_10.setCollider("rectangle", 0,0, 10, 10)
   
 

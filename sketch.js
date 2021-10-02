@@ -84,13 +84,13 @@ function preload(){
     "flatboy/Jump10.png","flatboy/Jump11.png","flatboy/Jump12.png","flatboy/Jump13.png","flatboy/Jump14.png",
     "flatboy/Jump15.png")
 
-    boss_run= loadAnimation("freedinosprite/Run (1).png","freedinosprite/Run (2).png","freedinosprite/Run (3).png",
-    "freedinosprite/Run (4).png","freedinosprite/Run (5).png","freedinosprite/Run (6).png", 
-    "freedinosprite/Run (7).png","freedinosprite/Run (8).png")
+    boss_run= loadAnimation("freedinosprite/png/Run (1).png","freedinosprite/png/Run (2).png","freedinosprite/png/Run (3).png",
+    "freedinosprite/png/Run (4).png","freedinosprite/png/Run (5).png","freedinosprite/png/Run (6).png", 
+    "freedinosprite/png/Run (7).png","freedinosprite/png/Run (8).png")
     
-    boss_dead= loadAnimation("freedinosprite/Dead (1).png","freedinosprite/Dead (2).png","freedinosprite/Dead (3).png",
-    "freedinosprite/Dead (4).png","freedinosprite/Dead (5).png","freedinosprite/Dead (6).png",
-    "freedinosprite/Dead (7).png","freedinosprite/Dead (8).png")
+    boss_dead= loadAnimation("freedinosprite/png/Dead (1).png","freedinosprite/png/Dead (2).png","freedinosprite/png/Dead (3).png",
+    "freedinosprite/png/Dead (4).png","freedinosprite/png/Dead (5).png","freedinosprite/png/Dead (6).png",
+    "freedinosprite/png/Dead (7).png","freedinosprite/png/Dead (8).png")
 
   dino1Img = loadAnimation("Mini-Dinos/DinoSprites_doux-0/0.png","Mini-Dinos/DinoSprites_doux-0/1.png","Mini-Dinos/DinoSprites_doux-0/2.png",
     "Mini-Dinos/DinoSprites_doux-0/3.png","Mini-Dinos/DinoSprites_doux-0/4.png","Mini-Dinos/DinoSprites_doux-0/5.png","Mini-Dinos/DinoSprites_doux-0/6.png",
@@ -145,16 +145,15 @@ function setup() {
   boundryRight = createSprite(displayWidth+250,displayHeight/2,500,displayHeight)
   boundryUp = createSprite(displayWidth/2,-400,displayWidth,500)
 
+  ground.visible = false
+  ground1.visible = false
+  stageEnd1.visible = false
+  boundryLeft.visible = false
+  boundryRight.visible = false
+  boundryUp.visible = false
+
   story = createSprite((displayWidth-70)/2,(displayHeight-180)/2, 600, 600)
   story.shapeColor = "black"
-
-  //ground.visible = true
-  //ground1.visible = true
-  //stageEnd1.visible = true
-  //boundryLeft.visible = true
-  //boundryRight.visible = true
-  //boundryUp.visible = true
-
 
   //player 
   player = createSprite(300, 400, 50, 50);
@@ -162,7 +161,6 @@ function setup() {
   player.addAnimation("Run", player_run_img);
   player.addAnimation("Jump", player_jump_img);
   player.addAnimation("dead",  player_dead_img);
-  player.debug = true;
   player.setCollider("rectangle", -180, 0, 200, 450)
   player.scale = 0.45
 
@@ -182,7 +180,6 @@ function draw() {
   } else if (stage == 4){
     image(bgImage4,0,0,displayWidth-70,displayHeight-180)
   }
-  
 
   //functions
   drawSprites();
@@ -191,8 +188,28 @@ function draw() {
   collide();
   movement();
 
-  //allows the "dinoHeads" to have the same "x" as the "dinos"
   
+
+  if(gameState == "start"){
+    textSize(30);
+    fill(0, 102, 153);
+    text('A boy was once at a party with his friends.', 640, 190);
+    text('A boy was once at a party with his friends.', 640, 190);
+    text('While he was getting some wood for the fire', 640, 240);
+    text('While he was getting some wood for the fire', 640, 240);
+    text(', he heard screams coming from the forest.', 640, 290);
+    text(', he heard screams coming from the forest.', 640, 290);
+    text('Everyone at the party had been infected', 640, 340);
+    text('Everyone at the party had been infected', 640, 340);
+    text('his friends. Help the boy find the cause of', 640, 390);
+    text('his friends. Help the boy find the cause of', 640, 390);
+    text('the problem by solving various problems', 640, 440);
+    text('the problem by solving various problems', 640, 440);
+    text('and defeating the boss. Good luck.', 640, 490);
+    text('and defeating the boss. Good luck.', 640, 490);
+
+  }
+
   //the console
   console.log()
   
